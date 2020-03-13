@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Get Current Date and time</h2>
+
+<form>
+  <label>Date:</label><br>
+  <input type="text" id="date" name="date" ><br>
+  <label for="lname">Time</label><br>
+    <input type="text" id="time" name="time" ><br>
+  
+</form>
+
+
+<script>
+
+// *******------- START ------- date today *******//
+
+	var today =new Date();
+    var date=today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
+   
+    	document.getElementById("date").value =date;
+      
+//****** ------ END ------ ******* //
+
+
+//****** ----START---- time today ------ ****
+
+
+
+function myTimer() {   
+var today = new Date();
+
+var ampm = time > 12 ? "pm" : "am";
+
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds() +" "+ ampm;
+    document.getElementById("time").value=time;
+ }
+ 
+  var timer = setInterval(function() {
+  myTimer();
+}, 1000);
+ 
+//**** ----END---- time today ------ ****
+ 
+</script>
+</body>
+</html>
